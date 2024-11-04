@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Page</title>
+    <style>
+        /* 전체 페이지 스타일 */
+        body {
+            background-color: black;
+            color: #888;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 상단 네비게이션 스타일 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            padding: 10px 20px;
+            border-bottom: 1px solid #555;
+            width: 100%;
+            z-index: 100;
+            background-color: black;
+        }
+
+        .navbar a {
+            color: #888;
+            font-size: 24px;
+            margin-right: 20px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .navbar .active {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        /* 섹션 스타일 */
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #home {
+            padding-top: 60px;
+        }
+
+        /* 다운로드 버튼 스타일 */
+        .download-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #555;
+            color: #888;
+            font-size: 24px;
+            padding: 20px 40px;
+            cursor: pointer;
+        }
+
+        .download-button:hover {
+            color: #aaa;
+            border-color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <!-- 상단 네비게이션 -->
+    <div class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#character">Character</a>
+    </div>
+
+    <!-- Home 섹션 -->
+    <section id="home">
+        <h1>Home Section</h1>
+    </section>
+
+    <!-- Character 섹션 -->
+    <section id="character">
+        <div class="download-button">다운로드</div>
+    </section>
+
+</body>
+</html>
