@@ -60,34 +60,12 @@
             padding: 20px 40px;
             cursor: pointer;
             transition: color 0.3s, border-color 0.3s;
+            text-decoration: none; /* 링크 스타일 제거 */
         }
 
         .download-button:hover {
             color: #aaa;
             border-color: #aaa;
-        }
-
-        /* 팝업 스타일 */
-        .popup {
-            display: none; /* 기본적으로 숨김 */
-            position: absolute;
-            top: calc(100% + 4px); /* 보라색 줄의 높이만큼 아래로 이동 */
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #222;
-            border: 1px solid #555;
-            padding: 5px 0; /* 패딩을 줄여서 크기 감소 */
-            color: #fff;
-            z-index: 200;
-            text-align: left;
-            white-space: nowrap; /* 줄바꿈 방지 */
-            box-sizing: border-box; /* 패딩 포함하여 크기 계산 */
-            width: 100%; /* 너비를 부모 요소에 맞춤 */
-        }
-
-        /* 캐릭터 링크에 마우스 오버 시 팝업 표시 */
-        .navbar a:hover .popup {
-            display: block; /* 마우스 오버 시 표시 */
         }
 
         /* 보라색 줄 스타일 */
@@ -106,26 +84,6 @@
         .navbar a:hover .underline {
             display: block; /* 마우스 오버 시 줄 표시 */
         }
-
-        /* 팝업의 리스트 스타일 제거 */
-        .popup ul {
-            list-style-type: none; /* 기본 점 스타일 제거 */
-            padding: 0; /* 기본 패딩 제거 */
-            margin: 0; /* 기본 마진 제거 */
-        }
-
-        /* 팝업 항목 스타일 */
-        .popup li {
-            font-size: 14px; /* 글자 크기를 줄여서 팝업 너비에 맞춤 */
-            padding: 2px 10px; /* 항목 사이의 간격 */
-        }
-
-        /* 팝업 제목 스타일 */
-        .popup h3 {
-            font-size: 20px; /* 폰트 크기 유지 */
-            margin: 0; /* 기본 마진 제거 */
-            padding: 0 10px; /* 양쪽 패딩 추가 */
-        }
     </style>
 </head>
 <body>
@@ -135,23 +93,16 @@
             <div class="underline"></div> <!-- 보라색 줄 -->
         </a>
         <a href="#character">캐릭터
-            <div class="popup">
-                <ul>
-                    <li>DP-12</li>
-                    <li>KSVK 2</li>
-                    <li>G36</li>
-                </ul>
-            </div>
             <div class="underline"></div> <!-- 보라색 줄 -->
         </a>
-        <a href="#Option">옵션
+        <a href="#Option">설정
             <div class="underline"></div> <!-- 보라색 줄 -->
         </a>
     </div>
 
     <!-- Home 섹션 -->
     <section id="Main">
-        <div class="download-button">다운로드</div>
+        <a href="https://raw.githubusercontent.com/RShiro003/ProjectHellmod/main/assets/game-installer.exe" download class="download-button">게임 다운로드</a>
     </section>
 
     <!-- Character 섹션 -->
