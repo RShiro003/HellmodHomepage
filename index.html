@@ -43,24 +43,28 @@
         <p>세계관 설명 내용이 여기에 표시됩니다.</p>
     </div>
 
-    <!-- 게임 소개 (이미지 슬라이드) -->
-    <div id="gameIntro" class="content-section" style="display: none;">
-        <div class="slide-container">
-            <button onclick="prevSlide()">&#10094;</button>
-            <div class="slides">
-                <div class="slide">
-                    <img src="file:///C:/Seoultceh/2/2_2/Wep/Project/HellmodHomepage/projectHellModMap.png" alt="게임 이미지 1">
-                    <p>게임 설명 1</p>
-                </div>
-                <div class="slide" style="display: none;">
-                    <img src="image2.jpg" alt="게임 이미지 2">
-                    <p>게임 설명 2</p>
-                </div>
-                <!-- 필요한 만큼 슬라이드 추가 -->
+<!-- 게임 소개 (이미지 슬라이드) -->
+<div id="gameIntro" class="content-section" style="display: none;">
+    <div class="slide-container">
+        <button onclick="prevSlide()">&#10094;</button>
+        
+        <div class="slides">
+            <div class="slide" style="background-color: #4CAF50;">
+                <p>게임 설명 예시 1</p>
             </div>
-            <button onclick="nextSlide()">&#10095;</button>
+            <div class="slide" style="background-color: #2196F3; display: none;">
+                <p>게임 설명 예시 2</p>
+            </div>
+            <div class="slide" style="background-color: #FF5722; display: none;">
+                <p>게임 설명 예시 3</p>
+            </div>
+            <!-- 필요한 만큼 슬라이드 추가 가능 -->
         </div>
+        
+        <button onclick="nextSlide()">&#10095;</button>
     </div>
+</div>
+
 </section>
 
 <script src="yourScript.jsp"></script>
