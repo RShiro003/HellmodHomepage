@@ -121,10 +121,6 @@ section {
     transition: background-color 0.3s;
 }
 
-.character-button:hover {
-    background-color: #444;
-}
-
 /* 이미지 표시 영역 스타일 */
 .image-display {
     width: 800px;
@@ -139,5 +135,117 @@ section {
     text-align: center;
     transition: background-color 0.3s ease;
 }
+.button-container1 {
+    position: absolute;
+    top: 1650px;
+    left: 200px;
+    display: flex;
+    flex-direction: row;
+}
+/* 옵션 버튼 스타일 */
+.Optio-button {
+    width: 150px;
+    height: 50px;
+    background-color: #666;
+    border: 3px solid #333;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* 클릭된 상태의 보라색 스타일 */
+.Optio-button.active {
+    background-color: #800080; /* 보라색 */
+}
+
+/* 기본 버튼 스타일 */
+.Optio-button {
+    width: 150px;
+    height: 50px;
+    background-color: #666;
+    border: 3px solid #333;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* 선택된 버튼 상태 (active) */
+.Optio-button.active {
+    background-color: #800080; /* 보라색 */
+}
+
+/* 기본적으로 모든 컨텐츠 섹션 숨기기 */
+.content-section {
+    display: none;
+    padding: 20px;
+    color: #333;
+    font-size: 18px;
+}
+
+/* 세계관 설명 스타일 */
+#worldDescription {
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+/* 게임 소개 슬라이드 컨테이너 */
+#gameIntro .slide-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+/* 슬라이드 */
+#gameIntro .slides .slide {
+    display: none;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* 슬라이드 이미지 스타일 */
+#gameIntro .slides .slide img {
+    width: 100%; /* 슬라이드 너비에 맞게 이미지 크기 조정 */
+    height: auto; /* 비율 유지하면서 높이 자동 조정 */
+    max-width: 600px; /* 이미지의 최대 너비 설정 (필요에 따라 조정) */
+    max-height: 400px; /* 이미지의 최대 높이 설정 (필요에 따라 조정) */
+    border-radius: 8px;
+}
 
 
+/* 좌우 버튼 스타일 */
+#gameIntro .slide-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#gameIntro .slide-container button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 좌우 버튼 위치 설정 */
+#gameIntro .slide-container button:nth-child(1) { /* 왼쪽 버튼 */
+    left: 0;
+}
+
+#gameIntro .slide-container button:nth-child(3) { /* 오른쪽 버튼 */
+    right: 0;
+}

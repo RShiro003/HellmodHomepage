@@ -26,15 +26,45 @@
             <button class="character-button" data-color="red">권총</button>
             <button class="character-button" data-color="blue">산탄총</button>
             <button class="character-button" data-color="green">저격소총</button>
-            <button class="character-button" data-color="green">산탄총</button>
+            <button class="character-button" data-color="black">산탄총</button>
         </div>
         <div class="image-display" id="imageDisplay">Image Display</div>
     </section>
 
-    <!-- 설정 섹션 -->
-    <section id="Option">
-        <h2>Option Section</h2>
-    </section>
+<!-- 설정 섹션 -->
+<section id="Option">
+    <div class="button-container1">
+        <button class="Optio-button active" onclick="toggleActive(this, 'worldDescription')" data-color="pa">세계관</button>
+        <button class="Optio-button" onclick="toggleActive(this, 'gameIntro')" data-color="ume">게임 소개</button>
+    </div>
+
+    <!-- 세계관 설명 -->
+    <div id="worldDescription" class="content-section">
+        <p>세계관 설명 내용이 여기에 표시됩니다.</p>
+    </div>
+
+    <!-- 게임 소개 (이미지 슬라이드) -->
+    <div id="gameIntro" class="content-section" style="display: none;">
+        <div class="slide-container">
+            <button onclick="prevSlide()">&#10094;</button>
+            <div class="slides">
+                <div class="slide">
+                    <img src="file:///C:/Seoultceh/2/2_2/Wep/Project/HellmodHomepage/projectHellModMap.png" alt="게임 이미지 1">
+                    <p>게임 설명 1</p>
+                </div>
+                <div class="slide" style="display: none;">
+                    <img src="image2.jpg" alt="게임 이미지 2">
+                    <p>게임 설명 2</p>
+                </div>
+                <!-- 필요한 만큼 슬라이드 추가 -->
+            </div>
+            <button onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+<script src="yourScript.jsp"></script>
+
 
     <script src="script.js"></script>
 </body>
