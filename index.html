@@ -31,45 +31,43 @@
         <div class="image-display" id="imageDisplay">Image Display</div>
     </section>
 
-<!-- 설정 섹션 -->
-<section id="Option">
-    <div class="button-container1">
-        <button class="Optio-button active" onclick="toggleActive(this, 'worldDescription')" data-color="pa">세계관</button>
-        <button class="Optio-button" onclick="toggleActive(this, 'gameIntro')" data-color="ume">게임 소개</button>
-    </div>
-
-    <!-- 세계관 설명 -->
-    <div id="worldDescription" class="content-section">
-        <p>세계관 설명 내용이 여기에 표시됩니다.</p>
-    </div>
-
-<!-- 게임 소개 (이미지 슬라이드) -->
-<div id="gameIntro" class="content-section" style="display: none;">
-    <div class="slide-container">
-        <button onclick="prevSlide()">&#10094;</button>
-        
-        <div class="slides">
-            <div class="slide" style="background-color: #4CAF50;">
-                <p>게임 설명 예시 1</p>
-            </div>
-            <div class="slide" style="background-color: #2196F3; display: none;">
-                <p>게임 설명 예시 2</p>
-            </div>
-            <div class="slide" style="background-color: #FF5722; display: none;">
-                <p>게임 설명 예시 3</p>
-            </div>
-            <!-- 필요한 만큼 슬라이드 추가 가능 -->
+    <!-- 설정 섹션 -->
+    <section id="Option">
+        <div class="button-container1">
+            <!-- 세계관 버튼에 active 클래스 추가 -->
+            <button class="Optio-button active" onclick="toggleActive(this, 'worldDescription')" data-color="pa">세계관</button>
+            <button class="Optio-button" onclick="toggleActive(this, 'gameIntro')" data-color="ume">게임 소개</button>
         </div>
-        
-        <button onclick="nextSlide()">&#10095;</button>
-    </div>
-</div>
 
-</section>
+        <!-- 세계관 설명을 기본적으로 표시 -->
+        <div id="worldDescription" class="content-section" style="display: block;">
+            <p>세계관 설명 내용이 여기에 표시됩니다.</p>
+        </div>
 
-<script src="yourScript.jsp"></script>
+        <!-- 게임 소개 (이미지 슬라이드) -->
+        <div id="gameIntro" class="content-section" style="display: none;">
+            <div class="slide-container">
+                <button onclick="prevSlide()">&#10094;</button>
+                
+                <div class="slides">
+                    <div class="slide" style="background-color: #4CAF50;">
+                        <p>게임 설명 예시 1</p>
+                    </div>
+                    <div class="slide" style="background-color: #2196F3; display: none;">
+                        <p>게임 설명 예시 2</p>
+                    </div>
+                    <div class="slide" style="background-color: #FF5722; display: none;">
+                        <p>게임 설명 예시 3</p>
+                    </div>
+                    <!-- 필요한 만큼 슬라이드 추가 가능 -->
+                </div>
+                
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </section>
 
-
+    <script src="yourScript.jsp"></script>
     <script src="script.js"></script>
 </body>
 </html>
