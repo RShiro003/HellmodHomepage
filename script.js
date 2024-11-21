@@ -103,39 +103,3 @@ window.addEventListener("load", () => {
         display.textContent = text; // image-display의 텍스트 설정
     }
 });
-// JavaScript to handle button click and toggle active state
-function toggleActive(button) {
-    // 해당 섹션 안의 버튼만 선택
-    const buttons = document.querySelectorAll('#Option .Optio-button');
-    buttons.forEach(btn => btn.classList.remove('active')); // 모든 버튼의 active 클래스 제거
-
-    // 클릭된 버튼에 active 클래스 추가
-    button.classList.add('active');
-}
-// 버튼 클릭 시 컨텐츠 토글
-function toggleActive(button, sectionId) {
-    // #Option 섹션 내의 버튼만 active 클래스를 조작
-    const buttons = document.querySelectorAll('#Option .Optio-button');
-    buttons.forEach(btn => btn.classList.remove('active'));
-
-    button.classList.add('active');
-
-    // "세계관" 및 "게임 소개" 섹션만 숨기고 표시
-    const worldSection = document.getElementById('worldDescription');
-    const gameIntroSection = document.getElementById('gameIntro');
-
-    if (worldSection) worldSection.style.display = 'none';
-    if (gameIntroSection) gameIntroSection.style.display = 'none';
-
-    // 선택된 섹션만 표시
-    const selectedSection = document.getElementById(sectionId);
-    if (selectedSection) {
-        selectedSection.style.display = 'block';
-    }
-
-    // 슬라이드 초기화 (게임 소개일 경우만)
-    if (sectionId === 'gameIntro') {
-        currentSlideIndex = 0;
-        showSlide(currentSlideIndex);
-    }
-}
