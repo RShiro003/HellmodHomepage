@@ -145,8 +145,8 @@ section {
 /* 슬라이더 컨테이너 */
 .slider-container {
     position: relative;
-    width: 100%;
-    height: 100vh;
+    width: 80%;
+    height: 80vh;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -171,7 +171,6 @@ section {
     font-weight: bold;
     color: white;
 }
-
 /* 각 색상을 정의 */
 .red {
     background-color: red;
