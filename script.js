@@ -90,19 +90,23 @@ document.querySelectorAll(".character-button").forEach(button => {
     });
 });
 
-// 페이지 로드 시 첫 번째 캐릭터 버튼의 배경색 설정
+// 페이지 로드 시 첫 번째 캐릭터 버튼이 눌린 상태로 시작
 window.addEventListener("load", () => {
     const firstButton = document.querySelector(".character-button"); // 첫 번째 버튼 선택
-    const display = document.getElementById("imageDisplay");
+    const characterImage = document.getElementById("characterImage");
+    const characterText = document.getElementById("characterText");
 
     if (firstButton) {
-        const color = firstButton.getAttribute("data-color"); // 첫 번째 버튼의 배경색
+        const image = firstButton.getAttribute("data-image"); // 첫 번째 버튼의 이미지
         const text = firstButton.getAttribute("data-text"); // 첫 번째 버튼의 텍스트
 
-        display.style.backgroundColor = color; // image-display의 배경색 설정
-        display.textContent = text; // image-display의 텍스트 설정
+        // 이미지와 텍스트 설정
+        characterImage.src = image;
+        characterImage.style.display = "block"; // 이미지를 표시
+        characterText.textContent = text; // 텍스트 설정
     }
 });
+
 // 캐릭터 버튼 클릭 시 이미지와 텍스트 업데이트
 document.querySelectorAll(".character-button").forEach(button => {
     button.addEventListener("click", () => {
