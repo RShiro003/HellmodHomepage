@@ -103,3 +103,21 @@ window.addEventListener("load", () => {
         display.textContent = text; // image-display의 텍스트 설정
     }
 });
+// 캐릭터 버튼 클릭 시 이미지와 텍스트 업데이트
+document.querySelectorAll(".character-button").forEach(button => {
+    button.addEventListener("click", () => {
+        const image = button.getAttribute("data-image"); // 이미지 경로
+        const text = button.getAttribute("data-text");   // 텍스트
+
+        // 이미지와 텍스트 요소 선택
+        const characterImage = document.getElementById("characterImage");
+        const characterText = document.getElementById("characterText");
+
+        // 이미지 업데이트
+        characterImage.src = image;
+        characterImage.style.display = "block"; // 이미지를 표시
+
+        // 텍스트 업데이트
+        characterText.textContent = text;
+    });
+});

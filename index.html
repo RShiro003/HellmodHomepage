@@ -23,16 +23,20 @@
         download class="download-button">게임 다운로드</a>
     </section>
 
-    <!-- 캐릭터 섹션 -->
     <section id="character" class="character-section">
         <div class="button-container">
-            <button class="character-button" data-color="red">권총</button>
-            <button class="character-button" data-color="blue">산탄총</button>
-            <button class="character-button" data-color="green">저격소총</button>
-            <button class="character-button" data-color="black">산탄총</button>
+            <button class="character-button" data-image="images/HG.png" data-text="권총 설명">HG</button>
+            <button class="character-button" data-image="images/AR.png" data-text="돌격소총 설명">AR</button>
+            <button class="character-button" data-image="images/RF.png" data-text="저격소총 설명">RF</button>
+            <button class="character-button" data-image="images/SG.png" data-text="샷건 설명">SG</button>
         </div>
-        <div class="image-display" id="imageDisplay">Image Display</div>
+        <div class="image-display" id="imageDisplay">
+            <img id="characterImage" src="" alt="캐릭터 이미지" style="display: none;">
+            <p id="characterText">캐릭터 설명이 여기에 표시됩니다.</p>
+        </div>
     </section>
+    
+    
 
     <!-- 설정 섹션 -->
     <section id="World">
@@ -46,14 +50,14 @@
     <div class="slider-container">
         <!-- 슬라이드 -->
         <div class="slider">
-            <div class="slide red">
-                <p>빨간색 - 게임 소개 1</p>
+            <div class="slide">
+                <img src="images/projectHellModMap.png" alt="" class="slide-image">
             </div>
-            <div class="slide blue">
-                <p>파란색 - 게임 소개 2</p>
+            <div class="slide">
+                <p class="slide-text">슬라이더 이미지 2</p>
             </div>
-            <div class="slide green">
-                <p>초록색 - 게임 소개 3</p>
+            <div class="slide">
+                <p class="slide-text">슬라이더 이미지 3</p>
             </div>
         </div>
         <!-- 네비게이션 버튼 -->
@@ -61,6 +65,7 @@
         <button class="next-button">→</button>
     </div>
 </section>
+
 
 <script>
     const slider = document.querySelector('.slider');
