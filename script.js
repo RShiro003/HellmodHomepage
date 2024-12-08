@@ -112,29 +112,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const characterImage = document.getElementById("characterImage");
     const characterText = document.getElementById("characterText");
 
-    // 모든 버튼 클릭 이벤트 설정
-    buttons.forEach((button, index) => {
+    // 페이지 로드 시 첫 번째 버튼 초기화
+    if (buttons.length > 0) {
+        const firstButton = buttons[0]; // 첫 번째 버튼
+        const firstImage = firstButton.getAttribute("data-image");
+        const firstText = firstButton.getAttribute("data-text").replace(/\|/g, '<br>'); // |을 <br>로 변환
+
+        // 이미지 및 텍스트 초기화
+        characterImage.src = firstImage;
+        characterImage.style.display = "block";
+        characterText.innerHTML = firstText;
+    }
+
+    // 각 버튼 클릭 이벤트 설정
+    buttons.forEach(button => {
         button.addEventListener("click", () => {
             const image = button.getAttribute("data-image");
             const text = button.getAttribute("data-text").replace(/\|/g, '<br>'); // |을 <br>로 변환
 
-            // 이미지 업데이트
+            // 이미지 및 텍스트 업데이트
             characterImage.src = image;
             characterImage.style.display = "block";
-
-            // 텍스트 업데이트
             characterText.innerHTML = text;
         });
-
-        // 페이지 로드 시 첫 번째 버튼의 클릭 로직 실행
-        if (index === 0) {
-            const firstImage = button.getAttribute("data-image");
-            const firstText = button.getAttribute("data-text").replace(/\|/g, '<br>');
-
-            // 이미지 및 텍스트 초기화
-            characterImage.src = firstImage;
-            characterImage.style.display = "block";
-            characterText.innerHTML = firstText;
-        }
     });
 });
