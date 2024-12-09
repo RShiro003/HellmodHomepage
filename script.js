@@ -114,11 +114,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 페이지 로드 시 첫 번째 버튼 초기화
     if (buttons.length > 0) {
-        const firstButton = buttons[0]; // 첫 번째 버튼
+        const firstButton = buttons[0];
         const firstImage = firstButton.getAttribute("data-image");
-        const firstText = firstButton.getAttribute("data-text").replace(/\|/g, '<br>'); // |을 <br>로 변환
+        const firstText = firstButton.getAttribute("data-text").replace(/\|/g, '<br>');
 
-        // 이미지 및 텍스트 초기화
         characterImage.src = firstImage;
         characterImage.style.display = "block";
         characterText.innerHTML = firstText;
@@ -128,12 +127,43 @@ document.addEventListener("DOMContentLoaded", () => {
     buttons.forEach(button => {
         button.addEventListener("click", () => {
             const image = button.getAttribute("data-image");
-            const text = button.getAttribute("data-text").replace(/\|/g, '<br>'); // |을 <br>로 변환
+            const text = button.getAttribute("data-text").replace(/\|/g, '<br>');
 
-            // 이미지 및 텍스트 업데이트
             characterImage.src = image;
             characterImage.style.display = "block";
             characterText.innerHTML = text;
         });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    let currentIndex = 0;
+
+    // 슬라이드 이동 함수
+    function moveSlide(index) {
+        const offset = -index * 100; // 슬라이드 너비를 기준으로 이동
+        slider.style.transform = `translateX(${offset}%)`;
+        currentIndex = index;
+    }
+
+    // 이전 버튼 클릭 이벤트
+    prevButton.addEventListener('click', () => {
+        const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+        moveSlide(newIndex);
+    });
+
+    // 다음 버튼 클릭 이벤트
+    nextButton.addEventListener('click', () => {
+        const newIndex = (currentIndex + 1) % slides.length;
+        moveSlide(newIndex);
+    });
+
+    // 페이지 로드 시 첫 번째 슬라이드 표시
+    window.addEventListener('load', () => {
+        moveSlide(0);
     });
 });
