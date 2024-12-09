@@ -305,7 +305,14 @@ section {
     border: 2px solid #555;
     border-radius: 8px;
 }
-
+.slide-description {
+    position: relative;
+    top: -20px; /* 설명 텍스트를 위로 이동 */
+    text-align: center;
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.5;
+}
 .slide-description h2 {
     font-size: 24px;
     margin-bottom: 10px;
