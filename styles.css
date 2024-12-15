@@ -85,6 +85,93 @@ section {
     transition: background-color 0.3s;
     cursor: pointer;
 }
+/* 전체 페이지 스타일 */
+body {
+    background-color: black;
+    color: #888;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* 상단 네비게이션 스타일 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    background-color: black;
+    padding: 10px 20px;
+    border-bottom: 1px solid #555;
+    z-index: 100;
+}
+
+.navbar a {
+    color: #888;
+    font-size: 36px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.underline {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 4px;
+    background-color: purple;
+    display: none;
+}
+
+.navbar a:hover .underline {
+    display: block;
+}
+
+/* 각 섹션 스타일 */
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#Main {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding-top: 60px;
+}
+
+#character {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+#Option {
+    background-color: #3a3a3a;
+    color: #fff;
+}
+
+/* 다운로드 버튼 스타일 */
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 80px;
+    background-color: #d446ff;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
 
 /* 캐릭터 섹션 */
 .character-section {
@@ -94,7 +181,6 @@ section {
     height: 100vh;
     padding-left: 150px;
 }
-
 
 .button-container {
     position: absolute;
@@ -122,6 +208,7 @@ section {
     height: 500px;
     background-color: rgb(90, 90, 90);
     display: flex;
+    align-items: center;
     justify-content: center;
     font-size: 24px;
     color: white;
@@ -129,6 +216,103 @@ section {
     text-align: center;
     transition: background-color 0.3s ease;
 }
+
+/* 세계관 설명 스타일 */
+#worldDescription {
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+/* 슬라이더 컨테이너 */
+.slider-container {
+    position: relative;
+    width: 481px; /* 이미지 너비 */
+    height: 858px; /* 이미지 높이 */
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #000;
+    border: 3px solid #555;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 481px;
+    height: 858px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+/* Dot 네비게이션 스타일 */
+.dot-container {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active-dot {
+    background-color: #d446ff;
+}
+
+.character-button.selected {
+    background-color: #d446ff; /* 선택된 버튼 색상 */
+    color: #fff;
+    border: 3px solid #fff;
+    transform: scale(1.05); /* 약간 확대 효과 */
+    transition: all 0.3s ease;
+}
+
 
 /* 세계관 설명 스타일 */
 #worldDescription {
