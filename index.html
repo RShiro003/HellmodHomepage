@@ -24,6 +24,7 @@
 
     <section id="character" class="character-section">
         <div class="button-container">
+<<<<<<< HEAD
             <button class="character-button" data-image="img/HG.png" data-text=
             "이동속도: 빠름|체력 회복: 빠름|화력: 낮음|체력: 평범">HG</button>
             <button class="character-button" data-image="img/AR.png" data-text=
@@ -32,12 +33,29 @@
             "이동속도: 느림|체력 회복: 낮음|화력: 높음|체력: 낮음">RF</button>
             <button class="character-button" data-image="img/SG.png" data-text=
             "이동속도: 평범|체력 회복: 빠름|화력: 높음|체력: 낮음">SG</button>
+=======
+            <button class="character-button" data-image="img/HG.png" data-text="이동속도: 빠름|체력 회복: 빠름|잔디: 평범|더트: 느림">
+                HG
+            </button>
+            <button class="character-button" data-image="img/AR.png" data-text="이동속도: 평범|체력 회복: 평범|잔디: 평범|더트: 평범">
+                AR
+            </button>
+            <button class="character-button" data-image="img/RF.png" data-text="이동속도: 느림|체력 회복: 느림|잔디: 빠름|더트: 느림">
+                RF
+            </button>
+            <button class="character-button" data-image="img/SG.png" data-text="이동속도: 평범|체력 회복: 빠름|잔디: 느림|더트: 빠름">
+                SG
+            </button>
+>>>>>>> 24cd5a6986453e8c7e9f87c2d4b296b208b0078b
         </div>
-        <div class="image-display" id="imageDisplay">
-            <img id="characterImage" src="" alt="캐릭터 이미지" style="display: none;">
-            <p id="characterText">캐릭터 설명이 여기에 표시됩니다.</p>
+        <div class="character-display">
+            <div class="character-details">
+                <img id="characterImage" src="" alt="캐릭터 이미지" style="display: none;">
+                <div id="characterText">캐릭터 설명이 여기에 표시됩니다.</div>
+            </div>
         </div>
     </section>
+    
     
     
 
@@ -62,22 +80,53 @@
                 <li><span style="font-weight: bold;">3.</span> 전투는 철저히 지정된 구역에서만 진행된다.</li>
             </ul>
         </div>
+<<<<<<< HEAD
     </div>
 </section>
 
 <!-- 게임 소개 섹션 -->
 <section id="Gameself">
+=======
+    </section>
+
+<section id="Gameself" class="game-intro-section">
+>>>>>>> 24cd5a6986453e8c7e9f87c2d4b296b208b0078b
     <div class="slider-container">
-        <!-- 슬라이드 -->
+        <!-- 슬라이더 -->
         <div class="slider">
+            <!-- 첫 번째 슬라이드 -->
             <div class="slide">
+<<<<<<< HEAD
                 <img src="img/sie.png" alt="" class="slide-image">
+=======
+                <img src="img/projectHellModMap.png" alt="맵 이미지" class="slide-image">
+                <div class="slide-description">
+                    <h2>맵 소개</h2>
+                    <p>여기에는 게임의 맵에 대한 설명이 표시됩니다.</p>
+                </div>
+>>>>>>> 24cd5a6986453e8c7e9f87c2d4b296b208b0078b
             </div>
+            <!-- 두 번째 슬라이드 -->
             <div class="slide">
+<<<<<<< HEAD
                 <img src="img/main.png" alt="" class="slide-image">
+=======
+                <img src="img/gameplay.png" alt="더트 설명" class="slide-image">
+                <div class="slide-description">
+                    <h2>더트</h2>
+                </div>
+>>>>>>> 24cd5a6986453e8c7e9f87c2d4b296b208b0078b
             </div>
+            <!-- 세 번째 슬라이드 -->
             <div class="slide">
+<<<<<<< HEAD
                 <img src="img/maingame.png" alt="" class="slide-image">
+=======
+                <img src="img/characters.png" alt="언덕 설명" class="slide-image">
+                <div class="slide-description">
+                    <h2>언덕</h2>
+                </div>
+>>>>>>> 24cd5a6986453e8c7e9f87c2d4b296b208b0078b
             </div>
         </div>
         <!-- 네비게이션 버튼 -->
@@ -86,38 +135,6 @@
     </div>
 </section>
 
-
-<script>
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slide');
-    const prevButton = document.querySelector('.prev-button');
-    const nextButton = document.querySelector('.next-button');
-    let currentIndex = 0;
-
-    // 슬라이드 이동 함수
-    function moveSlide(index) {
-        const offset = -index * 100; // 각 슬라이드의 너비를 기준으로 이동
-        slider.style.transform = `translateX(${offset}%)`;
-        currentIndex = index;
-    }
-
-    // 이전 버튼 클릭 이벤트
-    prevButton.addEventListener('click', () => {
-        const newIndex = (currentIndex - 1 + slides.length) % slides.length;
-        moveSlide(newIndex);
-    });
-
-    // 다음 버튼 클릭 이벤트
-    nextButton.addEventListener('click', () => {
-        const newIndex = (currentIndex + 1) % slides.length;
-        moveSlide(newIndex);
-    });
-
-    // 페이지 로드 시 첫 번째 슬라이드 표시
-    window.addEventListener('load', () => {
-        moveSlide(0);
-    });
-</script>
 
 
     <script src="script.js"></script>

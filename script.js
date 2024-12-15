@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentSectionIndex = 0;
     let isAnimating = false; // 애니메이션 상태를 저장하는 변수
 
+<<<<<<< HEAD
     // 저장된 버튼 인덱스 가져오기
     const savedButtonIndex = localStorage.getItem("selectedButtonIndex");
 
@@ -16,14 +17,34 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (buttons.length > 0) {
         // 저장된 값이 없으면 첫 번째 버튼을 초기화
         updateCharacterDisplay(buttons[0], 0);
+=======
+    // 페이지 로드 시 첫 번째 버튼 초기화
+    if (buttons.length > 0) {
+        const firstButton = buttons[0];
+        const firstImage = firstButton.getAttribute("data-image");
+        const firstText = firstButton.getAttribute("data-text").replace(/\|/g, '<br>');
+
+        characterImage.src = firstImage;
+        characterImage.style.display = "block";
+        characterText.innerHTML = firstText;
+>>>>>>> 24cd5a6986453e8c7e9f87c2d4b296b208b0078b
     }
 
     // 각 버튼 클릭 이벤트 설정
     buttons.forEach((button, index) => {
         button.addEventListener("click", () => {
+<<<<<<< HEAD
             updateCharacterDisplay(button, index);
             // 선택한 버튼의 인덱스를 로컬 스토리지에 저장
             localStorage.setItem("selectedButtonIndex", index);
+=======
+            const image = button.getAttribute("data-image");
+            const text = button.getAttribute("data-text").replace(/\|/g, '<br>');
+
+            characterImage.src = image;
+            characterImage.style.display = "block";
+            characterText.innerHTML = text;
+>>>>>>> 24cd5a6986453e8c7e9f87c2d4b296b208b0078b
         });
     });
 
@@ -121,5 +142,37 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         window.scrollTo(0, 0); // 스크롤을 페이지 맨 위로 이동
         currentSectionIndex = 0; // 초기 섹션을 메인 섹션으로 설정
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    let currentIndex = 0;
+
+    // 슬라이드 이동 함수
+    function moveSlide(index) {
+        const offset = -index * 100; // 슬라이드 너비를 기준으로 이동
+        slider.style.transform = `translateX(${offset}%)`;
+        currentIndex = index;
+    }
+
+    // 이전 버튼 클릭 이벤트
+    prevButton.addEventListener('click', () => {
+        const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+        moveSlide(newIndex);
+    });
+
+    // 다음 버튼 클릭 이벤트
+    nextButton.addEventListener('click', () => {
+        const newIndex = (currentIndex + 1) % slides.length;
+        moveSlide(newIndex);
+    });
+
+    // 페이지 로드 시 첫 번째 슬라이드 표시
+    window.addEventListener('load', () => {
+        moveSlide(0);
     });
 });
