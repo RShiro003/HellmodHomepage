@@ -29,7 +29,6 @@ body {
     position: relative;
 }
 
-/* 네비게이션 링크의 보라색 밑줄 */
 .underline {
     position: absolute;
     bottom: -5px;
@@ -87,8 +86,6 @@ section {
     cursor: pointer;
 }
 
-
-
 /* 캐릭터 섹션 */
 .character-section {
     display: flex;
@@ -98,7 +95,6 @@ section {
     padding-left: 150px;
 }
 
-/* 버튼 컨테이너 스타일 */
 .button-container {
     position: absolute;
     left: 240px;
@@ -107,7 +103,6 @@ section {
     gap: 0px;
 }
 
-/* 캐릭터 버튼 스타일 */
 .character-button {
     width: 150px;
     height: 125px;
@@ -121,11 +116,10 @@ section {
     transition: background-color 0.3s;
 }
 
-/* 이미지 표시 영역 스타일 */
 .image-display {
     width: 800px;
     height: 500px;
-    background-color: green;
+    background-color: rgb(90, 90, 90);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,7 +128,8 @@ section {
     border: 3px solid #555;
     text-align: center;
     transition: background-color 0.3s ease;
-} 
+}
+
 /* 세계관 설명 스타일 */
 #worldDescription {
     background-color: #f9f9f9;
@@ -145,46 +140,35 @@ section {
 /* 슬라이더 컨테이너 */
 .slider-container {
     position: relative;
-    width: 80%;
-    height: 80vh;
-    overflow: hidden;
+    width: 481px; /* 이미지 너비 */
+    height: 858px; /* 이미지 높이 */
     margin: 0 auto;
+    overflow: hidden;
+    background-color: #000;
+    border: 3px solid #555;
 }
 
-/* 슬라이더 */
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-/* 각 슬라이드 */
 .slide {
-    min-width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    text-align: center;
+    min-width: 481px;
+    height: 858px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 36px;
-    font-weight: bold;
-    color: white;
-}
-/* 각 색상을 정의 */
-.red {
-    background-color: red;
+    background-color: #1a1a1a;
 }
 
-.blue {
-    background-color: blue;
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.green {
-    background-color: green;
-}
-
-/* 네비게이션 버튼 */
 .prev-button, .next-button {
     position: absolute;
     top: 50%;
@@ -192,57 +176,52 @@ section {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 10px 20px;
+    font-size: 20px;
     cursor: pointer;
-    font-size: 24px;
     z-index: 10;
-}
-
-.prev-button {
-    left: 20px;
-}
-
-.next-button {
-    right: 20px;
+    border-radius: 50%;
 }
 
 .prev-button:hover, .next-button:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.image-display {
-    width: 800px;
-    height: 500px;
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+/* Dot 네비게이션 스타일 */
+.dot-container {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #222;
-    border: 3px solid #555;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
+    gap: 10px;
 }
 
-#characterImage {
-    max-width: 90%;
-    max-height: 70%;
-    margin-bottom: 20px;
-    border: 2px solid #888;
-    border-radius: 8px;
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#characterText {
-    font-size: 24px;
-    color: white;
-}
-/* 슬라이드 이미지 */
-.slide-image {
-    object-fit: cover; /* 슬라이더 영역을 꽉 채움 (이미지의 일부가 잘릴 수 있음) */
+.dot.active-dot {
+    background-color: #d446ff;
 }
 
-.slider-container {
-    width: 100%;
-    height: 70vh; /* 슬라이더 높이를 브라우저 뷰포트에 비례하여 설정 */
-    overflow: hidden;
+.character-button.selected {
+    background-color: #d446ff; /* 선택된 버튼 색상 */
+    color: #fff;
+    border: 3px solid #fff;
+    transform: scale(1.05); /* 약간 확대 효과 */
+    transition: all 0.3s ease;
 }

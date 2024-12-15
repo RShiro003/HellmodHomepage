@@ -18,21 +18,20 @@
 
     <!-- 메인 섹션 -->
     <section id="Main">
-        <a href="https://raw.githubusercontent.com/
-        RShiro003/ProjectHellmod/main/assets/game-installer.exe" 
-        download class="download-button">게임 다운로드</a>
+        <a href="https://raw.githubusercontent.com/RShiro003/ProjectHellmod/main/bin/ProjectHellmod.exe" 
+        download class="download-button">게임 다운로드</a>     
     </section>
 
     <section id="character" class="character-section">
         <div class="button-container">
             <button class="character-button" data-image="img/HG.png" data-text=
-            "이동속도: 빠름|체력 회복: 빠름|잔디: 평범|더트: 느림">HG</button>
+            "이동속도: 빠름|체력 회복: 빠름|화력: 낮음|체력: 평범">HG</button>
             <button class="character-button" data-image="img/AR.png" data-text=
-            "이동속도: 평범|체력 회복: 평범|잔디: 평범|더트: 평범">AR</button>
+            "이동속도: 평범|체력 회복: 평범|화력: 평범|체력: 높음">AR</button>
             <button class="character-button" data-image="img/RF.png" data-text=
-            "이동속도: 느림|체력 회복: 느림|잔디: 빠름|더트: 느림">RF</button>
+            "이동속도: 느림|체력 회복: 낮음|화력: 높음|체력: 낮음">RF</button>
             <button class="character-button" data-image="img/SG.png" data-text=
-            "이동속도: 평범|체력 회복: 빠름|잔디: 느림|더트: 빠름">SG</button>
+            "이동속도: 평범|체력 회복: 빠름|화력: 높음|체력: 낮음">SG</button>
         </div>
         <div class="image-display" id="imageDisplay">
             <img id="characterImage" src="" alt="캐릭터 이미지" style="display: none;">
@@ -42,26 +41,43 @@
     
     
 
-    <!-- 설정 섹션 -->
-    <section id="World">
-        <!-- 세계관 설명을 기본적으로 표시 -->
-        <div id="worldDescription" class="content-section" style="display: block;">
-            <p>세계관 소개b</p>
+<!-- 설정 섹션 -->
+<section id="World" style="background-color: #1a1a1a; padding: 40px 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+    <!-- 세계관 설명을 기본적으로 표시 -->
+    <div id="worldDescription" class="content-section" style="max-width: 800px; margin: 0 auto; background-color: #2a2a2a; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);">
+        <h2 style="font-size: 2rem; color: #ffffff; margin-bottom: 20px; font-weight: bold; text-transform: uppercase; text-align: center;">세계관 소개</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #ffffff; text-align: justify; margin-bottom: 20px;">
+            <strong>"더 이상 인간은 총을 쏘지 않는다."</strong><br>
+            인류는 오랜 전쟁의 역사를 통해 깨달았습니다. 인간의 손에 의해 조작되는 무기가 가져오는 끝없는 희생과 파괴는 더 이상 지속될 수 없다는 것을요. 그 결과, 과학기술의 발전과 윤리적 고민이 결합하여 완전히 새로운 무기가 탄생했습니다. 바로 <strong>"자아를 가진 총"</strong>입니다.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #ffffff; text-align: justify; margin-bottom: 20px;">
+            <strong>"총이 스스로 생각하고 싸운다."</strong><br>
+            이 총들은 단순한 무기가 아닙니다. 내장된 자아와 AI를 통해 스스로 전략을 수립하고, 전투를 수행할 수 있는 지능형 병기입니다.
+        </p>
+        <div style="background-color: #333333; padding: 20px; border-radius: 10px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);">
+            <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 10px; font-weight: bold;">윤리 규칙</h3>
+            <ul style="list-style-type: none; padding: 0; font-size: 1rem; color: #ffffff;">
+                <li style="margin-bottom: 10px;"><span style="font-weight: bold;">1.</span> 절대 인간을 향해 발포하지 않는다.</li>
+                <li style="margin-bottom: 10px;"><span style="font-weight: bold;">2.</span> 오직 육상 환경에서만 발포가 가능하다.</li>
+                <li><span style="font-weight: bold;">3.</span> 전투는 철저히 지정된 구역에서만 진행된다.</li>
+            </ul>
         </div>
-    </section>
+    </div>
+</section>
+
 <!-- 게임 소개 섹션 -->
 <section id="Gameself">
     <div class="slider-container">
         <!-- 슬라이드 -->
         <div class="slider">
             <div class="slide">
-                <img src="img/projectHellModMap.png" alt="" class="slide-image">
+                <img src="img/sie.png" alt="" class="slide-image">
             </div>
             <div class="slide">
-                <p class="slide-text">2</p>
+                <img src="img/main.png" alt="" class="slide-image">
             </div>
             <div class="slide">
-                <p class="slide-text">3</p>
+                <img src="img/maingame.png" alt="" class="slide-image">
             </div>
         </div>
         <!-- 네비게이션 버튼 -->
